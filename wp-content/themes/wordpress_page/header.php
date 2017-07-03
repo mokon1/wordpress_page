@@ -5,8 +5,16 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Wordpress Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="main.css">
+   	<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script type="text/javascript" src="wp-content/themes/wordpress_page/js/app.js"></script>
+    <!--<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css"> -->
+    
+    <link rel="stylesheet" href=<?php bloginfo('template_url')?>/font-awesome/css/font-awesome.min.css?>
+    <link rel="stylesheet" href=<?php bloginfo('stylesheet_url') ?>> <!-- DODANE 1!! -->
+    
+    
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin-ext" rel="stylesheet">
 </head>
 <body>
