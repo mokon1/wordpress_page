@@ -6,8 +6,10 @@
     <title>Wordpress Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
    	<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-    <script src="js/app.js" type="text/javascript"></script>
-    <script type="text/javascript" src="wp-content/themes/wordpress_page/js/app.js"></script>
+    <!--<script src="js/app.js" type="text/javascript"></script>-->
+    <script type="text/javascript" src="js/app.js"></script>
+  
+
     <!--<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="main.css"> -->
     
@@ -29,10 +31,7 @@
 				</div>
 				<nav class="inline alignright">
 					<ul class="menu">
-						<li class="menu-item"><a href="#">home</a></li>
-						<li class="menu-item"><a href="#">about</a></li>
-						<li class="menu-item"><a href="#">contact</a></li>
-						<li class="menu-item"><a href="#">all posts</a></li>
+                        <?php wp_nav_menu( array( 'menu' => 'menu' ) ); ?>
 					</ul>
 				</nav>
 			</div>
