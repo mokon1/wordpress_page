@@ -1,16 +1,5 @@
 <?php get_header(); ?>
 
-<section>
-	<div class="photo-wrapper">
-		<div class="photo-box">
-            <img src="wp-content/themes/wordpress_page/img/img1.jpg" alt=''>
-        </div>
-        <div class="photo-box">
-            <img src="wp-content/themes/wordpress_page/img/img2.jpg" alt=''>
-		</div>
-	</div>
-</section>
-
 <section id="main-section">
     <main class="main-content">
         <div class="wraper">
