@@ -1,12 +1,11 @@
-
 <?php get_header(); ?>
 
 <section>
 	<div class="photo-wrapper">
 		<div class="photo-box">
             <img src="wp-content/themes/wordpress_page/img/img1.jpg" alt=''>
-			</div>
-            <div class="photo-box">
+        </div>
+        <div class="photo-box">
             <img src="wp-content/themes/wordpress_page/img/img2.jpg" alt=''>
 		</div>
 	</div>
@@ -40,8 +39,15 @@
             ?>
         </div>
     </main>
-     <?php get_sidebar(); ?>
+    <script> //added more text
+        var moreText = $("span.tag");
+        moreText.each(function(){
+            $(this).on("click",function(){
+                $(this).prev().children('span').toggleClass('hide');
+            })                     
+        })
+    </script>
+    <?php get_sidebar(); ?>
 </section>
 
 <?php get_footer(); ?>
-
