@@ -328,3 +328,20 @@ li{
     color: blue;
     text-decoration: underline;
 }
+
+/* PAGE */
+.textContainer{
+    width: 90%;
+    margin: 0 auto;
+}
+form input,form textarea{
+    width: 100%;
+    font-size: 20px;
+}
+form input{
+    height: 30px;
+}
+input[type=submit]{
+    margin-top: 20px;
+    color: grey;
+}
