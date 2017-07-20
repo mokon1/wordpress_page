@@ -16,11 +16,16 @@
                         <p class="aligncenter tag"> <?php echo get_the_category_list(" |  "); ?></p>
                         
                         <p class="main-text">
+                            <script>
+                                $(function(){
+                                    $('span').removeClass('hide'); //added
+                                })
+                            </script>
                             <?php
                                  echo get_the_content();
                             ?>
                         </p>
-                    <span class="more-text tag">continue reading &#10137;></span>
+                    
                     </div>
                     <?php
                     endwhile;
