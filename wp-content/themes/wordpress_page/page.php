@@ -2,7 +2,7 @@
 
 <section id="main-section">
     <main class="main-content">
-        <div class="wraper">
+        <div class="wraper textContainer">
             <p class="main-text">
                <?php
                 while ( have_posts() ) : the_post();			
