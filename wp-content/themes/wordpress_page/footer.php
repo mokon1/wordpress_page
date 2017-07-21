@@ -1,19 +1,18 @@
 	<footer id="footer" class="background-bar">
 		<div class="wrapper">
 			<div class="widgets">
-				<div class="column">
-					<h4>Hygge Foundation</h4>
-					<p class="hygge-text">
-						Liquorice bear claw jelly marzipan jelly-o. Gingerbread croissant muffin macaroon jujubes. Brownie cotton candy gummies ice cream pastry topping topping biscuit. Cake donut sesame snaps gingerbread pudding chupa chups fruitcake bonbon icing. Tiramisu wafer cheesecake toffee pastry.
-					</p>
+                 <div class="column">
+                    <h4>Hygge Foundation</h4>
+                       <?php dynamic_sidebar('Sidebar 3', array('class' => 'hygge-text')); ?>
 				</div>
 				<div class="column">
-					<h4>Facebook</h4>
-					<img src="wp-content/themes/wordpress_page/img/widget-fb.png" alt="facebook-widget">
+                    <h4>Facebook</h4>
+					<?php dynamic_sidebar('Sidebar 4'); ?>
+                    
 				</div>
 				<div class="column">
-					<h4>Instagram</h4>
-					<img src="wp-content/themes/wordpress_page/img/widget-in.png" alt="instagram-widget">
+                    <h4>Instagram</h4>
+					<?php dynamic_sidebar('Sidebar 5'); ?>
 				</div>
 			</div>
 		</div>

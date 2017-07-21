@@ -12,7 +12,24 @@
             </p>
         </div>
     </main>
-     <?php get_sidebar(); ?>
+    <aside class="aside">
+        <div class="wrapper wrapper-aside">
+           <div class="sidebar-box">
+                <ul class="sidebar menu tag">                
+                    <?php wp_list_categories( array(
+                        'orderby'    => 'count',
+                        'order' => 'DESC',
+                        'number'    => 7,
+                        'title_li' => "<h2 class='aside-titles'>Categories </h2></br>"
+                    ) ); ?>
+                    <!-- or <?php //dynamic_sidebar(); ?> -->
+                </ul>
+            </div>
+        </div>
+    </aside>
 </section>
 
 <?php get_footer(); ?>
+
+
+

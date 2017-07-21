@@ -1,72 +1,42 @@
 <aside class="aside">
 	<div class="wrapper wrapper-aside">
 	   <div class="sidebar-box">
-			<ul class="sidebar menu tag sidebarCategory"> <!-- dodaje klase sidebarCategory -->
-                <?php dynamic_sidebar(); ?>
+			<ul class="sidebar menu tag">                
+                <?php wp_list_categories( array(
+                    'orderby'    => 'count',
+                    'order' => 'DESC',
+                    'number'    => 7,
+                    'title_li' => "<h2 class='aside-titles'>Categories </h2></br>"
+                ) ); ?>
+                <!-- or <?php //dynamic_sidebar(); ?> -->
             </ul>
         </div>   
-           <div class="sidebar-box">
-					<h4 class="aside-titles">Related posts</h4>
-					<ul class="sidebar menu">
-						<li class="mini-posts">
-							<a href="#" class="tag">
-								<h5 class="mini-title">Morning pleasures</h5>
-								<img src="wp-content/themes/wordpress_page/img/mini1.jpg" alt="related post">
-							</a>
-						</li>
-						<li class="mini-posts">
-							<a href="#" class="tag">
-								<h5 class="mini-title">Easy (distr)action</h5>
-								<img src="wp-content/themes/wordpress_page/img/mini2.jpg" alt="related post">
-							</a>
-						</li>
-						<li class="mini-posts">
-							<a href="#" class="tag">
-								<h5 class="mini-title">Meditaion</h5>
-								<img src="wp-content/themes/wordpress_page/img/mini3.jpg" alt="related post">
-							</a>
-						</li>
-					</ul>
-				</div>
+        <div class="sidebar-box">
+            <h2 class="aside-titles">RELATED POSTS</h2>
+            </br>
+            <ul class="sidebar menu"> 
+                <?php
+                    $relatedPosts = get_posts( array(
+                        'numberposts' => 3, 
+                        'category__in' => wp_get_post_categories($post->ID), 
+                        'post__not_in' => array($post->ID) ) );
 
+                    if($relatedPosts) foreach($relatedPosts as $post) {
+                        setup_postdata($post); ?>
+                    <ul> 
+                        <li>
+                            <a href="<?php the_permalink() ?>"> <b><?php the_title(); ?></b></a>
+
+                            <?php
+                                $content = apply_filters( 'the_content', get_the_content() );
+                                $picture = substr( $content, 0, strpos( $content, '</p>' )); //show picture
+                                echo $picture;
+                            ?>
+                        </li>
+                    </ul>   
+                <?php }
+                wp_reset_postdata(); ?> 
+            </ul>
+        </div>
     </div>
 </aside>
-<!--<aside class="aside">
-			<div class="wrapper wrapper-aside">
-				<div class="sidebar-box">
-					<h4 class="aside-titles">Categories</h4>
-					<ul class="sidebar menu">
-						<li><a href="#" class="tag">self-development</a></li>
-						<li><a href="#" class="tag">psychology</a></li>
-						<li><a href="#" class="tag">travelling</a></li>
-						<li><a href="#" class="tag">tradition</a></li>
-						<li><a href="#" class="tag">lifestyle</a></li>
-						<li><a href="#" class="tag">culture</a></li>
-						<li><a href="#" class="tag">habits</a></li>
-					</ul>
-				</div>
-				<div class="sidebar-box">
-					<h4 class="aside-titles">Related posts</h4>
-					<ul class="sidebar menu">
-						<li class="mini-posts">
-							<a href="#" class="tag">
-								<h5 class="mini-title">Morning pleasures</h5>
-								<img src="wp-content/themes/wordpress_page/img/mini1.jpg" alt="related post">
-							</a>
-						</li>
-						<li class="mini-posts">
-							<a href="#" class="tag">
-								<h5 class="mini-title">Easy (distr)action</h5>
-								<img src="wp-content/themes/wordpress_page/img/mini2.jpg" alt="related post">
-							</a>
-						</li>
-						<li class="mini-posts">
-							<a href="#" class="tag">
-								<h5 class="mini-title">Meditaion</h5>
-								<img src="wp-content/themes/wordpress_page/img/mini3.jpg" alt="related post">
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-</aside>-->

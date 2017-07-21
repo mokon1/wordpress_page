@@ -27,13 +27,16 @@
     </main>
     <script> //added more text
         var moreText = $("span.tag");
+        var mainContent = $(".main-content");
+        
         moreText.each(function(){
-            $(this).on("click",function(){
-                $(this).prev().children('span').toggleClass('hide');
+            $(this).on("click",function(e){
+                e.preventDefault();
+                $(this).prev().children().find('span').toggleClass('hide');
             })                     
-        })
+        });
+        mainContent.css("width","100%");
     </script>
-    <?php get_sidebar(); ?>
 </section>
 
 <?php get_footer(); ?>

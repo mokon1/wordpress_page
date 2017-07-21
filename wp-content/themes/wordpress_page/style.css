@@ -345,3 +345,20 @@ input[type=submit]{
     margin-top: 20px;
     color: grey;
 }
+
+/* SIDEBAR - RELATED POSTS*/
+.menu li p img{
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* PORTFOLIO */
+.portfolio{
+    width: 80vw;
+    margin: 0 auto;
+}
+.portfolioItem{
+    display: inline-block !important;
+    margin: 0 30px;
+    vertical-align: center;
+}
