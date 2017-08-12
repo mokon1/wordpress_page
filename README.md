@@ -4,6 +4,8 @@
 
 Project from the Coders Lab bootcamp.
 
-**Practice: PHP, WordPress, HTML, CSS. **
+**Practice: PHP, WordPress, HTML, CSS.**
 
 Installed plugins: Contact Form 7, Portfolio Post Type.
+
+**Theme: wp-content/themes/wordpress_page/**
